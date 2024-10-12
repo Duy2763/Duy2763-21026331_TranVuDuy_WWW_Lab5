@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import utils.EntityManagerFactoryUtil;
 
+import java.io.File;
 import java.io.IOException;
 
 import daoImpl.DAODienThoaiImpl;
@@ -38,7 +39,9 @@ public class QuanLyFormServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
-		daoDienThoai.deleteDienThoai(Integer.parseInt(id), getServletContext().getInitParameter("uploadDir"));
+		String uploadDir = getServletContext().getInitParameter("uploadDir");
+        String realPath = getServletContext().getRealPath("") + File.separator + uploadDir;
+		daoDienThoai.deleteDienThoai(Integer.parseInt(id), realPath);
 		request.setAttribute("listDT", daoDienThoai.getAllDienThoai());
 		request.getRequestDispatcher("/show-view?show=manage").forward(request, response);
 	}

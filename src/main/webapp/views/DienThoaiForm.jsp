@@ -3,74 +3,71 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <title>Thêm điện thoại</title>
-    <style type="text/css">
+    <style>
         body {
-            font-family: Arial, sans-serif; /* Chọn font chữ cho toàn bộ trang */
-            background-color: #f9f9f9; /* Màu nền trang */
-            margin: 0; /* Bỏ margin mặc định */
-            padding: 20px; /* Padding cho toàn bộ trang */
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            max-width: 600px; /* Độ rộng tối đa của form */
-            margin: auto; /* Căn giữa form */
-            background: white; /* Nền trắng cho form */
-            padding: 20px; /* Padding cho form */
-            border-radius: 8px; /* Bo tròn các góc */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bóng cho form */
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            text-align: center; /* Căn giữa tiêu đề */
-            color: #333; /* Màu chữ cho tiêu đề */
-        }
-
-        .content-container {
-            display: flex;
-            flex-direction: column;
-            gap: 16px; /* Khoảng cách giữa các phần tử */
+        	margin-top: 48px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
         }
 
         .group-input {
-            display: flex;
-            flex-direction: column;
-            gap: 4px; /* Khoảng cách giữa label và input */
+            margin-bottom: 15px;
         }
 
         label {
-            font-weight: bold; /* Đậm chữ cho label */
-        }
-
-        .error {
-            color: red; /* Màu đỏ cho thông báo lỗi */
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
         }
 
         input[type="text"],
-        input[type="file"],
-        select {
-            padding: 10px; /* Padding cho các input */
-            border: 1px solid #ccc; /* Đường viền xám */
-            border-radius: 4px; /* Bo tròn các góc */
-            font-size: 1em; /* Kích thước chữ cho input */
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 12px; /* Tăng padding để input to hơn */
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px; /* Tăng font size để dễ đọc */
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
         }
 
         input[type="submit"] {
-            background-color: #28a745; /* Màu nền cho nút submit */
-            color: white; /* Màu chữ cho nút submit */
-            border: none; /* Bỏ viền cho nút submit */
-            padding: 10px; /* Padding cho nút submit */
-            border-radius: 4px; /* Bo tròn các góc cho nút submit */
-            cursor: pointer; /* Hiệu ứng con trỏ tay */
-            font-size: 1em; /* Kích thước chữ cho nút submit */
-            transition: background-color 0.3s; /* Hiệu ứng chuyển màu cho nút submit */
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #218838; /* Màu nền khi hover */
+            background-color: #45a049;
         }
     </style>
 </head>

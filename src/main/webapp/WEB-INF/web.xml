@@ -31,7 +31,7 @@
   </servlet-mapping>
   <context-param>
     <param-name>uploadDir</param-name>
-    <param-value>/Users/admin/Desktop/21026331_TranVuDuy_Lab5/21026331_TranVuDuy_Lab5/src/main/webapp/uploads/</param-value>
+    <param-value>/uploads</param-value>
   </context-param>
   <servlet>
     <description></description>

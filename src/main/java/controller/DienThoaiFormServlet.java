@@ -63,7 +63,8 @@ public class DienThoaiFormServlet extends HttpServlet {
             inputStream = filePart.getInputStream();
             // Lấy đường dẫn thư mục 'uploads' từ context
             String uploadDir = getServletContext().getInitParameter("uploadDir");
-            File uploadFolder = new File(uploadDir);
+            String realPath = getServletContext().getRealPath("") + File.separator + uploadDir;
+            File uploadFolder = new File(realPath);
             if (!uploadFolder.exists()) {
                 uploadFolder.mkdir();
             }

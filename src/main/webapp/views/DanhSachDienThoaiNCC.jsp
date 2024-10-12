@@ -16,6 +16,7 @@
     }
 
     h1 {
+    	margin-top: 16px;
         text-align: center;
         color: #333;
     }
@@ -53,6 +54,7 @@
         margin-top: 20px;
         background-color: white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 32px;
     }
 
     th, td {
